@@ -1,0 +1,59 @@
+<wxs src="../../wxs/sub.wxs" module="tools" />
+<view class="container">
+   <!-- 导航栏 -->
+  <view class='nav-wrap' style='width: 100vw; height: 240px;'>
+    <view class="" style="height: {{status}}px"></view>
+    <view class='nav-title' style='position: relative;width: 100vw;text-align: center;height: {{navHeight}}px;line-height: {{navHeight}}px'>
+      <view bindtap="back" style="cursor: pointer;position: absolute; top:{{(navHeight - 16) /2}}px;left: 15px; width: 20px; height: 20px;" >
+        <image style="cursor: pointer;position: absolute; top:0px; left: 0px; width: 9px;height: 16px;" src="https://res.wx.qq.com/mmspraiweb_node/dist/static/openaiplugin/img/arrow.png"></image>
+      </view>
+      <view class="words">
+        大爆炸
+      </view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <scroll-view class="content" scroll-y="{{true}}" style="height: calc(100vh - {{statusBarHeight}}px); top:  -{{240 - statusBarHeight}}px">
+    <view class="" style="height: {{240 - statusBarHeight- 94}}px; width: 100%;"></view>
+    <view class="content_top">
+      <view class="content_top_title">功能体验</view>
+      <view class="content_top_para">输入一段想分析的文字</view>
+      <view class="section">
+        <textarea maxlength="{{-1}}"  bindinput="bindinput" bindconfirm="bindconfirm" value="{{value}}" class="textarea" placeholder="请输入" />
+      </view>
+      <view class="switchview">
+        <switch class="switch" checked="{{checked}}" bindchange="change" color="rgba(101, 178, 255, 1)"></switch>
+        <view class="switch_word">混合颗粒：将相关联名词合并</view>
+      </view>
+      <image bindtap="btn" src="../../image/btn.png" class="btnImage"></image>
+    </view>
+    <view class="content_bottom">
+      <view class="terms">
+        <view class="terms_top {{terms_top_border ===  true? 'terms_top_border': ''}}">
+          <view class="terms_top_card {{choosePOSs === item.date && flag? 'chooseWords': ''}} {{currentIndex === index && !flag? 'chooseWords': ''}}" bindtap="chooseW" data-name="{{item.data}}" data-code="{{item.date}}"  data-index="{{index}}" wx:for="{{checked ? words_mix : words}}" wx:key="item" >{{item.data}}</view>
+          <view class="" style="clear: both;"></view>
+        </view>
+        <view class="terms_bottom">
+          <view class="terms_bottom_card {{choosePOSs === item ? 'choosePOSs': ''}}" bindtap="chooseP" data-code="{{item}}"  data-index="{{index}}" wx:for="{{checked ? POSs_mix : POSs}}" wx:key="item">{{tools.getPOSsCoding(item)}}</view>
+          <view class="" style="clear: both;"></view>
+        </view>
+      </view>
+      <view class="roperTerms">
+        <view class="roperTerms_title" wx:if="{{entitiesBoolean}}">专有名词</view>
+        <view class="name" wx:for-items="{{properNoun}}" wx:key="item.date" wx:if="{{entitiesBoolean}}">
+          <view class="name_left">
+            <view class="name_circle"></view>
+            <view class="name_title">{{tools.getEntity_types((item.date - 0))}}</view>
+            <view class="" style="clear:both"></view>
+          </view>
+          <view class="name_right">
+            <view class="name_right_com" wx:for-items="{{item.data}}" wx:for-item="data" wx:key="item">{{data}}</view>
+            <view class="" style="clear:both"></view>
+          </view>
+          <view class="" style="clear:both"></view>
+        </view>
+      </view>
+    </view>
+    <view class="" style="height: 15px; width: 100vw;"></view>
+  </scroll-view>
+</view>

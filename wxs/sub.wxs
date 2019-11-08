@@ -1,0 +1,190 @@
+var getPOSsCoding = function(item) {
+  if (item === 1) {
+    item = '形容词'
+  } else if (item === 2) {
+    item = '副形词'
+  } else if (item === 3) {
+    item = '名形词'
+  } else if (item === 4) {
+    item = '区别词'
+  } else if (item === 5) {
+    item = '连词'
+  }else if (item === 6) {
+    item = '副词'
+  }else if (item === 7) {
+    item = '叹词'
+  }else if (item === 8) {
+    item = '方位词'
+  }else if (item === 9) {
+    item = '语素词'
+  }else if (item === 10) {
+    item = '前接成分'
+  }else if (item === 11) {
+    item = '成语'
+  }else if (item === 12) {
+    item = '简称略语'
+  }else if (item === 13) {
+    item = '后接成分'
+  }else if (item === 14) {
+    item = '习用语'
+  }else if (item === 15) {
+    item = '数词'
+  }else if (item === 16) {
+    item = '名词'
+  }else if (item === 17) {
+    item = '人名'
+  }else if (item === 18) {
+    item = '姓'
+  }else if (item === 19) {
+    item = '名'
+  }else if (item === 20) {
+    item = '地名'
+  }else if (item === 21) {
+    item = '机构团体'
+  }else if (item === 22) {
+    item = '其他专[m'
+  }else if (item === 23) {
+    item = '非汉字串'
+  }else if (item === 24) {
+    item = '拟声词'
+  }else if (item === 25) {
+    item = '介词'
+  }else if (item === 26) {
+    item = '量词'
+  }else if (item === 27) {
+    item = '代词'
+  }else if (item === 28) {
+    item = '处所词'
+  }else if (item === 29) {
+    item = '时间词'
+  }else if (item === 30) {
+    item = '助词'
+  }else if (item === 31) {
+    item = '动词'
+  }else if (item === 32) {
+    item = '副动词'
+  }else if (item === 33) {
+    item = '名动词'
+  }else if (item === 34) {
+    item = '标点符号'
+  }else if (item === 35) {
+    item = '非语素字'
+  }else if (item === 36) {
+    item = '语气词'
+  }else if (item === 37) {
+    item = '状态词'
+  }else if (item === 38) {
+    item = '形语素'
+  }else if (item === 39) {
+    item = '区别语素'
+  }else if (item === 40) {
+    item = '副语素'
+  }else if (item === 41) {
+    item = '数词性语素'
+  }else if (item === 42) {
+    item = '名语素'
+  }else if (item === 43) {
+    item = '量语素'
+  }else if (item === 44) {
+    item = '代语素'
+  }else if (item === 45) {
+    item = '时语素'
+  }else if (item === 46) {
+    item = '动语素'
+  }else if (item === 47) {
+    item = '语气词语素'
+  }else if (item === 48) {
+    item = '状态词语素'
+  }else if (item === 49) {
+    item = '开始词'
+  }else if (item === 55) {
+    item = '结束词'
+  }else if (item === 0) {
+    item = '未知词性'
+  }else if (item === 50) {
+    item = 'URL'
+  }else if (item === 51) {
+    item = '电话号码'
+  }else if (item === 52) {
+    item = 'email'
+  }
+  return item
+}
+
+var getEntity_types = function(item) {
+  if (item === 100000010) {
+    item = '中国人名'
+  } else if (item === 100000011) {
+    item = '外国人名'
+  }else if (item === 100000012) {
+    item = '地名'
+  }else if (item === 100000013) {
+    item = '机构名'
+  }else if (item === 100000014) {
+    item = '影视，包括电影、电视剧、卡通动漫、节目'
+  }else if (item === 100000015) {
+    item = '小说，包括书籍、漫画'
+  }else if (item === 100000016) {
+    item = '软件'
+  }else if (item === 100000017) {
+    item = '游戏，包括单机游戏、网络游戏、手机游戏、网页游戏'
+  }else if (item === 100000018) {
+    item = '音乐，包括歌曲、专辑'
+  }else if (item === 100000019) {
+    item = '菜谱'
+  }else if (item === 100000020) {
+    item = '疾病'
+  }else if (item === 100000021) {
+    item = '药品'
+  }else if (item === 100000022) {
+    item = '汽车'
+  }else if (item === 100000023) {
+    item = '时间节日'
+  }else if (item === 100000200) {
+    item = ''
+  }else if (item === 100000201) {
+    item = '未知类别的实体'
+  }else if (item === 100000202) {
+    item = ''
+  }else if (item === 100000301) {
+    item = '音乐：下载地址'
+  }else if (item === 100000302) {
+    item = '音乐：乐器'
+  }else if (item === 100000303) {
+    item = '音乐：风格'
+  }else if (item === 100000304) {
+    item = '音乐：歌曲'
+  }else if (item === 100000305) {
+    item = '音乐：歌词'
+  }else if (item === 100000306) {
+    item = '音乐：专辑'
+  }else if (item === 100000307) {
+    item = '人名：乐队'
+  }else if (item === 100000308) {
+    item = '地名：景点'
+  }else if (item === 100000309) {
+    item = '地名：山'
+  }else if (item === 100000310) {
+    item = '地名：湖'
+  }else if (item === 100000311) {
+    item = '影视：电影'
+  }else if (item === 100000312) {
+    item = '影视：电视剧'
+  }else if (item === 100000313) {
+    item = '影视：综艺节目'
+  }else if (item === 100000314) {
+    item = '数字'
+  }else if (item === 100000315) {
+    item = '序数'
+  }else if (item === 100000316) {
+    item = '民族'
+  }else if (item === 100000317) {
+    item = '百科通用类别'
+  } else if (item === 0) {
+    item = '其他短语'
+  }
+  return item 
+}
+
+module.exports.getPOSsCoding = getPOSsCoding
+module.exports.getEntity_types = getEntity_types

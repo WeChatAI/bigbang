@@ -1,4 +1,4 @@
-# 微信对话开放平台小程序插件-小微写诗示例
+# 微信对话开放平台小程序插件-大爆炸示例
 
 
 此项目为微信对话开放平台开源项目，用于微信开发者进行插件快速接入、 组件复写功能开发时的参考Demo。微信开发者可以参考项目中的代码来开发应用，也可以直接使用项目中的代码到自己的App中。
@@ -20,6 +20,9 @@ https://developers.weixin.qq.com/doc/aispeech/miniprogram/intro.html
 
 > 请在 `project.config.json` 中配置自己小程序的appid或测试ID
 > 此示例代码仅做为接入微信对话开放平台小程序插件的示例供开发者参考
+
+
+![bigbang](./bigbang.png)
 
 
 
